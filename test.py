@@ -1,3 +1,4 @@
+from main import get_full_name
 import unittest
 from unittest.mock import patch
 
