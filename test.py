@@ -1,11 +1,10 @@
-from main import get_full_name
 import unittest
-from unittest.mock import patch
+from main import get_full_name
 
 class TestFullName(unittest.TestCase):
-    @patch('builtins.input', side_effect=['Vorname', 'Nachname'])
-    def test_get_full_name(self, input):
-        self.assertEqual(get_full_name(), 'Vorname Nachname')
+    def test_get_full_name(self):
+        expected_full_name = "Arberat Dushi"
+        self.assertEqual(get_full_name(), expected_full_name)
 
 if __name__ == '__main__':
     unittest.main()
